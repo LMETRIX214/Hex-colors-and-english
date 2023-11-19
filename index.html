@@ -1,5 +1,5 @@
 <!--
-    @version 1.24.10
+    @version 1.24.11
     @author LMETRIX214 <https://linktr.ee/lmetrix214>
     @exclusive use for COLEGIO LEONA VICARIO
     @subject Computing
@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLORES HEXADECIMALES</title>
+    <link rel="icon" id="favicon" href="imagen1.jpg">
     <!--Estilos-->
     <style>
         :root {
@@ -52,6 +53,18 @@
 
         ::-webkit-scrollbar {
             background-color: var(--gris0);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            #favicon {
+                content: url('imagen1.jpg');
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            #favicon {
+                content: url('imagen2.jpg');
+            }
         }
     </style>
 </head>
@@ -150,6 +163,15 @@
 
         window.addEventListener("focus", () => {
             document.title = doctitulo;
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            const favicon = document.getElementById('favicon');
+            if (e.matches) {
+                favicon.href = './IMG/imagen1.png';
+            } else {
+                favicon.href = './IMG/imagen2.png';
+            }
         });
     </script>
 </body>
