@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLORES HEXADECIMALES</title>
-    <link rel="icon" id="favicon" href="./IMG/imagen1.png">
+    <link rel="icon" id="favicon" href="IMG/imagen1.png">
     <!--Estilos-->
     <style>
         :root {
@@ -57,13 +57,13 @@
 
         @media (prefers-color-scheme: dark) {
             #favicon {
-                content: url('./IMG/imagen1.png');
+                content: url('IMG/imagen1.png');
             }
         }
 
         @media (prefers-color-scheme: light) {
             #favicon {
-                content: url('./IMG/imagen2.png');
+                content: url('IMG/imagen2.png');
             }
         }
     </style>
@@ -168,9 +168,9 @@
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
             const favicon = document.getElementById('favicon');
             if (e.matches) {
-                favicon.href = './IMG/imagen1.png';
+                favicon.href = 'IMG/imagen1.png';
             } else {
-                favicon.href = './IMG/imagen2.png';
+                favicon.href = 'IMG/imagen2.png';
             }
         });
     </script>
